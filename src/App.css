@@ -1,38 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+
+* {
+  font-family: 'Neucha', cursive;
+}
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: rgb(255,127,80);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+
+/* Questionnaire component */
+.questionnaire {
+  background-color: #ffffff;
+  color: rgb(255,127,80);
+  width: 700px;
+  margin: 0 auto;
+  padding: 50px;
+  border-radius: 2px;
+}
+.question {
+  height: 100px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* AnswerButton component */
+.answers-list {
+  width: 700px;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.answer {
+  width: 49%;
+  height: 45px;
+  background-color: rgb(255,127,80);
+  border: none;
+  border-radius: 2px;
+  margin: 5px auto;
+  cursor: pointer;
+  font-size: 1.5rem;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+/* correct answer */
+.bg-green {
+  background-color: green;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* wrong answer */
+.bg-red {
+  background-color: red;
 }

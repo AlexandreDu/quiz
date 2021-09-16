@@ -1,5 +1,5 @@
 {
-  "name": "films-project",
+  "name": "quizz-project",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,6 +13,7 @@
     "@testing-library/user-event": "^12.8.3",
     "aos": "^3.0.0-beta.6",
     "axios": "^0.21.1",
+    "he": "^1.2.0",
     "normalize.css": "^8.0.1",
     "react": "^17.0.2",
     "react-animate-on-scroll": "^2.1.5",
