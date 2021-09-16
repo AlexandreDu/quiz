@@ -40,17 +40,18 @@ const Home = (props) => {
 
 
     const handleAnswer = (answer) => {
-        
+
         if(!showTheAnswers) {
 
-        
+            console.log(answer)
             //We increment the index of the question to get the next question 
             if(currentQuestionGroupIndex < questionsGroups.length - 1) {
                 // display the correct and wrong answers
                 setShowTheAnswers(true)
                 
                 // We increment or not the score according to the answer of the user
-                if(answer === questionsGroups[currentQuestionGroupIndex].correct_answer) {
+                if(answer.answer === questionsGroups[currentQuestionGroupIndex].correct_answer) {
+                    console.log("right")
                     setScore(prevScore => prevScore + 1)
                 }
                 //We change index (so we go to the next question)
@@ -87,10 +88,11 @@ const Home = (props) => {
                 <div className="questionnaire"> 
                     <Questionnaire handleAnswer={handleAnswer} questionsGroups={questionsGroups} data={questionsGroups[currentQuestionGroupIndex]} showTheAnswers={showTheAnswers} />                    
                 </div>
-                : <p>Loading...</p>
+                : <p className="loading-alert">Loading...</p>
             
                 }
-            {finalMessage}
+                <p className="final-message">{finalMessage}</p>
+            
 
         </>
     )

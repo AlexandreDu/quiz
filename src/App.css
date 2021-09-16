@@ -9,7 +9,13 @@
 
 }
 body {
-  background-color: rgb(255,127,80);
+  /* background-color: rgb(255,127,80); */
+
+  
+  background-color: #ff7f50;
+
+  background-size: 20px 20px;
+  background-image:  repeating-linear-gradient(0deg, #e9ae98, #e9ae98 1px, #ff7f50 1px, #ff7f50);
 }
 
 /* Home component */
@@ -77,4 +83,27 @@ body {
 /* wrong answer */
 .bg-red {
   background-color: #DC3023;
+}
+
+.loading-alert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+.final-message {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 2rem;
 }
