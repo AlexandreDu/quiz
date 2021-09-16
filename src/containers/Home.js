@@ -17,11 +17,22 @@ const Home = (props) => {
             return response.json()
         })
         .then(data => {
-            console.log("fetch data.results", data.results)
-            setQuestionsGroups(data.results)
+
+            const questions = data.results.map((question) => {
+                return {
+                    ...question,
+                    answers: [
+                        question.correct_answer,
+                        ...question.incorrect_answers
+                    ].sort(() => 0.5 - Math.random())
+                }
+            })
+            console.log("questions vaut : ", questions)
+            setQuestionsGroups(questions)
             
         })
         .catch(err => {
+            console.log(err)
             return err
         })
        
@@ -44,18 +55,17 @@ const Home = (props) => {
                 }
                 //We change index (so we go to the next question)
                 
-                // window.setTimeout(() => {
-                //     setShowTheAnswers(false)
+                window.setTimeout(() => {
+                    console.log("1st time out")
+                    setShowTheAnswers(false)
+                    setCurrentQuestionGroupIndex(prevState => prevState + 1)
                     
-                // }, 1000)
-                // window.setTimeout(() => {
-                //     setCurrentQuestionGroupIndex(prevState => prevState + 1)
-                    
-                // }, 4000)
+                }, 1000)
             
                 
             } else {
                 //There are no question anymore
+                setShowTheAnswers(true)
                 setFinalMessage('You have got a score of ' + score + " points")
 
             }
@@ -65,15 +75,17 @@ const Home = (props) => {
 
     return (
         <>
-            <div>
+            <div className="infos-and-title">
                 <h1>Test your knowledge !</h1>
-                <p>Current Score : {score}</p>
-                <p>Question {currentQuestionGroupIndex + 1} on {questionsGroups.length}</p>
+                <div className="infos">
+                    <p>Current Score : {score} points</p>
+                    <p>Question {currentQuestionGroupIndex + 1} on {questionsGroups.length}</p>
+                </div>
             </div>
             
                 {questionsGroups.length > 0 ? 
                 <div className="questionnaire"> 
-                    <Questionnaire handleAnswer={handleAnswer} data={questionsGroups[currentQuestionGroupIndex]} showTheAnswers={showTheAnswers} />                    
+                    <Questionnaire handleAnswer={handleAnswer} questionsGroups={questionsGroups} data={questionsGroups[currentQuestionGroupIndex]} showTheAnswers={showTheAnswers} />                    
                 </div>
                 : <p>Loading...</p>
             
