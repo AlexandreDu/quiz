@@ -87,6 +87,7 @@ const Home = (props) => {
             setCurrentQuestionGroupIndex(0)
             setShowTheAnswers(false)
             setCounter(10)
+            setScore(0)
         }
         // display the first question
         setStartTheGame(true);

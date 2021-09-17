@@ -12,12 +12,21 @@ body {
   /* background-color: rgb(255,127,80); */
 
   
-  background-color: #ff7f50;
-
-  background-size: 20px 20px;
-  background-image:  repeating-linear-gradient(0deg, #e9ae98, #e9ae98 1px, #ff7f50 1px, #ff7f50);
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 150s ease infinite;
 }
-
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
 
 
 /* Home component */
@@ -59,6 +68,11 @@ body {
   -o-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   cursor: pointer;
+}
+
+.start-button:hover {
+  background-color: #DC3023;
+  color: white;
 }
 
 /* Questionnaire component */
