@@ -114,6 +114,9 @@ body {
   font-size: 1.5rem;
   color: white;
 }
+.answer:hover {
+  border: 2px solid black;
+}
 /* correct answer */
 .bg-green {
   background-color: #8DB255;
