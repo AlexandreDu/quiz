@@ -3,3 +3,6 @@ utilisation de l'api opentdb
 Idée d'un quizz intéractif avec une question par page, couleur très cartoon, et animation quand la question switch et un formulaire à la fin pour recevoir les résultats (ou avec avec identification  facebook login).
 
 chaque groupe de question est un questionnaire, avec à l'intérieur des boutons qui seront les réponses 
+
+
+rajouter timer question 
