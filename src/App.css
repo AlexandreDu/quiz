@@ -151,16 +151,56 @@ body {
 
 /* alarm */
 .alarm {
-  
+  height: 170px;
+  width: 170px;
 }
-.alarm img {
+.alarm-picture {
   display: block;
+  margin: 0 auto;
   width: 150px;
+
 }
+.animation-size-alarm {
+  animation: sizeAnimationAlarm 1s ease infinite;
+}
+@keyframes sizeAnimationAlarm {
+  0% {
+      height: 150px;
+      width: 150px;
+  }
+  50% {
+    height: 160px;
+    width: 160px;
+  }
+  
+  100% {
+    height: 150px;
+    width: 150px;
+  }
+}
+
 
 /* counter within the alarm */
 .counter {
   position: relative;
   top: -75px;
+  /* transform: translate(-70%, -70%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%); */
+
   color: #DC3023;
+  animation: sizeAnimationCounter 1s ease-in infinite;
+}
+@keyframes sizeAnimationCounter {
+  0% {
+    font-size:1.5rem;
+  }
+  50% {
+    font-size:1.505rem;
+  }
+  
+  100% {
+    font-size:1.5rem;
+  }
 }

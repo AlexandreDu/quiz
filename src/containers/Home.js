@@ -18,8 +18,9 @@ const Home = (props) => {
 
     const [startTheGame, setStartTheGame] = useState(false)
 
+ 
     const refButtonStart = useRef(null)
-
+    const alarmClockRef = useRef(null)
 
     // https://opentdb.com/api.php?amount=10&category=15&type=multiple
     
@@ -55,16 +56,21 @@ const Home = (props) => {
     
     // useEffect Hook to stop the setInterval (I stored the id in a ref, like this I can access here to it) and go to the next question
     useEffect(() => {
-        
+        if(counter < 4) {
+
+            alarmClockRef.current.className = "alarm-picture animation-size-alarm "
+        }
 
         if(counter < 1) {
+
+            alarmClockRef.current.className = "alarm-picture"
             // I clear the interval
             clearInterval(intervalRef.current)
             if(currentQuestionGroupIndex >= questionsGroups.length - 1) {
                
                 showFinalMessage()
                 setStartTheGame(false)
-                refButtonStart.current.style.display = "block";
+                refButtonStart.current.style.display = "block"
 
                 
                 
@@ -168,7 +174,8 @@ const Home = (props) => {
                 <div className="infos">
                     <p className="infos-score">Current Score : {score} points</p>
                     <div className="alarm">
-                        <img src={clockImg} alt="clock"/>
+
+                        <img className={"alarm-picture"} ref={alarmClockRef} src={clockImg} alt="clock"/>
                         <span className="counter">00 : {counter}</span>
                     </div>
                     <p className="infos-question-number">Question {currentQuestionGroupIndex + 1} on {questionsGroups.length}</p>

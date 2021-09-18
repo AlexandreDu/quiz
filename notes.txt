@@ -1,3 +1,4 @@
 Amélioration : 
+augmenter la taille du chrono quand on approche de 4 secondes
 -faire une bulle de discussion avec animation avec un personnage qui parle en fonction de la bonne réponse ou mauvaise réponse.
 et peut être aller meme jusqu'à personnaliser en fonction de la vitesse de réponse
