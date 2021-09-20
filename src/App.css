@@ -184,11 +184,6 @@ body {
 .counter {
   position: relative;
   top: -75px;
-  /* transform: translate(-70%, -70%);
-  -moz-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%); */
-
   color: #DC3023;
   animation: sizeAnimationCounter 1s ease-in infinite;
 }

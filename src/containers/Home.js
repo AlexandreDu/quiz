@@ -127,7 +127,7 @@ const Home = (props) => {
         if(!showTheAnswers) {
 
         
-            //We increment the index of the question to get the next question 
+            
             if(currentQuestionGroupIndex < questionsGroups.length - 1) {
                 // display the correct and wrong answers
                 setShowTheAnswers(true)
@@ -139,6 +139,7 @@ const Home = (props) => {
                 }
                 //We change index (so we go to the next question)
                  clearInterval(intervalRef.current)
+                 alarmClockRef.current.className = "alarm-picture"
                 window.setTimeout(() => {
                  
                     // I don't display the answers colors anymore
