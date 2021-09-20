@@ -204,3 +204,143 @@ body {
     font-size:1.5rem;
   }
 }
+
+
+@media screen and (min-width: 1025px) and (max-width: 1366px) {
+
+  .questionnaire {
+    top: 70%;
+  }
+  .start-button {
+    top: 60%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .questionnaire {
+    top: 60%;
+    width: 500px;
+  }
+  .answers-list {
+    width: 100%;
+  }
+  .answer {
+
+  }
+
+  .final-message {
+    top: 38%;
+  }
+}
+@media screen and (max-width: 560px) {
+  .infos-and-title {
+    width: 500px;
+  }
+  .questionnaire {
+    width: 350px;
+    top: 70%;
+  }
+  .final-message {
+    top: 65%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    /* background-color: rgb(255,127,80); */
+  
+    
+    background: linear-gradient(-95deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradient 150s ease infinite;
+  }
+  @keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+  }
+  .infos-and-title {
+    width: 100%;
+    display: block;
+    position: static;
+    top: 0;
+    left: 0;
+    transform: translate(0%, 0%);
+  }
+  .infos {
+    display: flex;
+    flex-direction: column;
+    position: static;
+  }
+  .start-button {
+
+    position: static;
+    transform: translate(0%, 0%);
+    margin: 0 auto;
+  }
+
+  .questionnaire {
+    width: 290px;
+    margin: 0 auto;
+    padding: 20px;
+    position: static;
+    transform: translate(0%, 0%);
+  }
+  .final-message {
+    top: 75%;
+  }
+  .infos-score {
+    font-size: 1rem;
+  }
+  .infos-question-number {
+    width: 200px;
+    font-size: 1rem;
+
+  }
+  .answer {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  h1 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  h2 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+  }
+  .infos-score {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .infos-question-number {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .question {
+    height: 80px;
+  }
+  .questionnaire {
+    width: 80%;
+    padding: 10px;
+  }
+  .start-button {
+    margin-top: 50px;
+  }
+  .final-message {
+    position: static;
+    transform: translate(0%, 0%);
+  }
+}
+
+
+

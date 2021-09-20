@@ -174,7 +174,6 @@ const Home = (props) => {
                 <div className="infos">
                     <p className="infos-score">Current Score : {score} points</p>
                     <div className="alarm">
-
                         <img className={"alarm-picture"} ref={alarmClockRef} src={clockImg} alt="clock"/>
                         <span className="counter">00 : {counter}</span>
                     </div>
