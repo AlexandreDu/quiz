@@ -137,9 +137,10 @@ const Home = (props) => {
                
                     setScore(prevScore => prevScore + 1)
                 }
+
                 //We change index (so we go to the next question)
-                 clearInterval(intervalRef.current)
-                 alarmClockRef.current.className = "alarm-picture"
+                clearInterval(intervalRef.current)
+                alarmClockRef.current.className = "alarm-picture"
                 window.setTimeout(() => {
                  
                     // I don't display the answers colors anymore
